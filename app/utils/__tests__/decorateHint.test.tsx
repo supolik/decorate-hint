@@ -39,10 +39,6 @@ describe('decorateHint', () => {
 
   it('should remove stopwords from front before matching', () => {
     const { before, highlighted, after } = getParts(renderHint('the acumen', 'business acumen'));
-    console.log({
-      render: renderHint('the acumen', 'business acumen').innerHTML,
-      before, highlighted, after
-    })
     expect(before).toBe('business ');
     expect(highlighted).toBe('acumen');
     expect(after).toBe('');
